@@ -13,8 +13,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100vw;
     min-width: 320px;
+    width: 100vw;
+    height: 200vh;
     background-color: #252525;
 }
 
@@ -25,7 +26,6 @@
     width: 100vw;
     min-width: 320px;
     height: 300px;
-    background-color: pink;
 }
 
 .header_container {
@@ -79,26 +79,17 @@
     transition: 0.5s;
     z-index: 0;
     cursor: pointer;
-    border: 5px solid #252525;
 }
 
 .image_container img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 3px solid #252525;
 }
 
 .image_container.active {
     width: 140px;
     height: 140px;
-}
-
-.icons_container {
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
 }
 
 .icons_container {
@@ -177,6 +168,7 @@
     height: 75px;
     transition: 0.5s;
     background-color: white;
+    border-radius: 20px;
 }
 
 .clicked_menu_container.active {
@@ -280,17 +272,261 @@
 
 .main_master_container {
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5px;
     width: 100%;
+    height: 100%;
     min-width: 320px;
-    height: 100vh;
     background-color: rgb(255, 110, 110);
     transform: translateY(-75px);
     transition: 0.5s;
     animation: main_up 0.5s linear forwards;
+    overflow: hidden;
 }
 
 .main_master_container.active {
     animation: main_down 0.5s linear forwards;
+}
+
+
+/*Left Glass Panel*/
+
+.left_container_master {
+    display: grid;
+    place-items: center;
+    flex: 1;
+    background-color: rgb(20, 20, 20);
+    overflow: hidden;
+}
+
+.left-glass-container {
+    margin-bottom: 20px;
+    display: grid;
+}
+
+.fullname {
+    display: flex;
+    align-items: center;
+}
+
+.fullname h1 {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 40px;
+    color: white;
+    margin: 0 20px;
+}
+
+.titles {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+@keyframes typing_text {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 70%
+    }
+    30% {
+        width: 100%
+    }
+    50% {
+        width: 100%
+    }
+    55% {
+        width: 100%
+    }
+    75% {
+        width: 100%;
+    }
+    80% {
+        width: 70%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.titles .title1,
+.titles .title2 {
+    display: none;
+}
+
+.titles .title1.active span,
+.titles .title2.active span {
+    animation: cursor 0.5s linear infinite;
+    border-right: 10px solid rgb(255, 110, 110);
+    height: 100%;
+}
+
+.titles .title1.active,
+.titles .title2.active {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 110, 110);
+    overflow: hidden;
+    width: 100%;
+    animation: typing_text 4s steps(15) infinite normal;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.titles .title1 {
+    max-width: 340px;
+}
+
+.titles .title2 {
+    max-width: 245px;
+}
+
+.short_message {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.short_message p {
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+
+
+/*Right Glass Panel*/
+
+.right_container_master {
+    display: grid;
+    place-items: center;
+    flex: 2.8;
+    background-color: rgb(20, 20, 20);
+}
+
+.right-glass-container {
+    display: grid;
+    grid-template-rows: .2fr .8fr 1fr;
+}
+
+.biography_title {
+    display: flex;
+    align-items: center;
+}
+
+.biography_title h1 {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 40px;
+    color: white;
+    margin: 0 20px;
+}
+
+.biography_parag {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.biography_parag p {
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+
+.bio_details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+
+.details {
+    display: grid;
+    place-items: center;
+    background-color: rgba(30, 30, 30, 1);
+    border-radius: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail {
+    color: white;
+    font-size: 20px;
+}
+
+.details_label {
+    display: grid;
+    color: white;
+    place-items: center;
+    font-size: 18px;
+    line-height: 0px;
+}
+
+#email {
+    color: white;
+    font-size: 15px;
+}
+
+#location {
+    color: white;
+    font-size: 17px;
+}
+
+[class*="glass"] {
+    width: 90%;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+}
+
+.footer.active {
+    position: relative;
+    display: none;
+}
+
+.footer #footer_text {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 110, 110);
+    text-align: center;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -303,13 +539,33 @@
         height: 70px;
         margin-left: 10px;
     }
+    .left-glass-container {
+        margin-top: 10px;
+    }
+    #email {
+        font-size: 18px;
+    }
+    #location {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (min-width: 991px) {
+    .container {
+        height: 130vh;
+    }
     .logo {
-        position: relative;
         width: 120px;
         height: 80px;
-        margin-left: 10px;
+    }
+    .main_master_container {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .left-glass-container {
+        height: 50%;
+    }
+    .right_container_master {
+        flex: 1;
     }
 }
