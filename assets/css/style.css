@@ -15,7 +15,7 @@
     flex-direction: column;
     min-width: 320px;
     width: 100vw;
-    height: 230vh;
+    height: 225vh;
     background-color: #252525;
 }
 
@@ -297,13 +297,14 @@
     position: relative;
     display: grid;
     place-items: center;
-    flex: 1;
+    flex: 0.4;
     background-color: rgb(20, 20, 20);
     overflow: hidden;
 }
 
 .left-glass-container {
     margin-bottom: 20px;
+    margin-top: 5px;
     display: grid;
     grid-template-rows: 1fr, 1fr, 1fr;
 }
@@ -419,7 +420,7 @@
 .right_container_master {
     display: grid;
     place-items: center;
-    flex: 1;
+    flex: 0.6;
     background-color: rgb(20, 20, 20);
 }
 
@@ -499,7 +500,7 @@
 }
 
 [class*="glass"] {
-    width: 90%;
+    width: 95%;
     height: 95%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 25px;
@@ -512,7 +513,10 @@
 
 .footer {
     position: relative;
+    min-width: 320px;
+    width: 100%;
     display: flex;
+    background-color: red;
 }
 
 .footer.active {
@@ -534,7 +538,73 @@
 
 /*Media  screen*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 576px) {
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 200vh;
+        background-color: #252525;
+    }
+    .left_container_master {
+        flex: .3;
+    }
+    .right_container_master {
+        flex: 1.1;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 200vh;
+        background-color: #252525;
+    }
+    [class*="glass"] {
+        max-width: 700px;
+        height: 100%;
+    }
+    .left_container_master {
+        flex: .3;
+    }
+    .right_container_master {
+        flex: 1;
+    }
+    .fullname h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .titles .title1.active,
+    .titles .title2.active {
+        font-size: 28px;
+    }
+    .short_message p {
+        font-size: 20px;
+    }
+    .biography_title h1 {
+        font-size: 50px;
+    }
+    .biography_parag p {
+        font-size: 20px;
+    }
+    .detail {
+        font-size: 20px;
+    }
+    .details_label {
+        font-size: 18px;
+    }
+    #email {
+        color: white;
+        font-size: 15px;
+    }
+    #location {
+        color: white;
+        font-size: 15px;
+    }
     .logo {
         position: relative;
         width: 110px;
@@ -554,7 +624,15 @@
 
 @media only screen and (min-width: 991px) {
     .container {
-        height: 130vh;
+        height: 150vh;
+    }
+    [class*="glass"] {
+        width: 95%;
+        height: 100%;
+        margin: 0;
+    }
+    .fullname h1 {
+        font-size: 55px;
     }
     .logo {
         width: 120px;
@@ -564,10 +642,15 @@
         flex-direction: row;
         gap: 10px;
     }
+    .left_container_master {
+        align-items: flex-start;
+        flex: 0.8;
+    }
     .left-glass-container {
-        height: 50%;
+        flex: 0.3;
+        height: 60%;
     }
     .right_container_master {
-        flex: 1;
+        flex: 0.8;
     }
 }
