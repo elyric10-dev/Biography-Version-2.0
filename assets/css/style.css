@@ -15,7 +15,7 @@
     flex-direction: column;
     min-width: 320px;
     width: 100vw;
-    height: 225vh;
+    height: 150vh;
     background-color: #252525;
 }
 
@@ -297,7 +297,7 @@
     position: relative;
     display: grid;
     place-items: center;
-    flex: 0.4;
+    flex: 0.3;
     background-color: rgb(20, 20, 20);
     overflow: hidden;
 }
@@ -420,7 +420,7 @@
 .right_container_master {
     display: grid;
     place-items: center;
-    flex: 0.6;
+    flex: 0.7;
     background-color: rgb(20, 20, 20);
 }
 
@@ -538,20 +538,46 @@
 
 /*Media  screen*/
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 320px) {
     .container {
         position: relative;
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 200vh;
-        background-color: #252525;
+        height: 180vh;
     }
     .left_container_master {
-        flex: .3;
+        flex: .4;
+    }
+    .titles .title1.active,
+    .titles .title2.active {
+        font-size: 30px;
+    }
+    .short_message p {
+        font-size: 20px;
+    }
+    .biography_title h1 {
+        font-size: 40px;
+    }
+    .biography_parag p {
+        font-size: 20px;
     }
     .right_container_master {
-        flex: 1.1;
+        flex: 1;
+    }
+    .detail {
+        font-size: 20px;
+    }
+    .details_label {
+        font-size: 18px;
+    }
+    #email {
+        color: white;
+        font-size: 15px;
+    }
+    #location {
+        color: white;
+        font-size: 15px;
     }
 }
 
@@ -572,7 +598,7 @@
         flex: .3;
     }
     .right_container_master {
-        flex: 1;
+        flex: 0.8;
     }
     .fullname h1 {
         font-size: 50px;
@@ -580,19 +606,19 @@
     }
     .titles .title1.active,
     .titles .title2.active {
-        font-size: 28px;
+        font-size: 30px;
     }
     .short_message p {
-        font-size: 20px;
+        font-size: 25px;
     }
     .biography_title h1 {
         font-size: 50px;
     }
     .biography_parag p {
-        font-size: 20px;
+        font-size: 25px;
     }
     .detail {
-        font-size: 20px;
+        font-size: 25px;
     }
     .details_label {
         font-size: 18px;
@@ -612,7 +638,7 @@
         margin-left: 10px;
     }
     .left-glass-container {
-        margin-top: 10px;
+        margin-top: 20px;
     }
     #email {
         font-size: 18px;
