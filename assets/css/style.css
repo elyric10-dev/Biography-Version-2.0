@@ -15,7 +15,7 @@
     flex-direction: column;
     min-width: 320px;
     width: 100vw;
-    height: 200vh;
+    height: 230vh;
     background-color: #252525;
 }
 
@@ -294,6 +294,7 @@
 /*Left Glass Panel*/
 
 .left_container_master {
+    position: relative;
     display: grid;
     place-items: center;
     flex: 1;
@@ -304,6 +305,7 @@
 .left-glass-container {
     margin-bottom: 20px;
     display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
 }
 
 .fullname {
@@ -314,7 +316,7 @@
 .fullname h1 {
     display: flex;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
     line-height: 40px;
     color: white;
@@ -364,14 +366,14 @@
 .titles .title1.active span,
 .titles .title2.active span {
     animation: cursor 0.5s linear infinite;
-    border-right: 10px solid rgb(255, 110, 110);
+    border-right: 3px solid rgb(255, 110, 110);
     height: 100%;
 }
 
 .titles .title1.active,
 .titles .title2.active {
     display: block;
-    font-size: 32px;
+    font-size: 23px;
     font-weight: 700;
     color: rgb(255, 110, 110);
     overflow: hidden;
@@ -407,7 +409,7 @@
 
 .short_message p {
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
 }
 
@@ -417,7 +419,7 @@
 .right_container_master {
     display: grid;
     place-items: center;
-    flex: 2.8;
+    flex: 1;
     background-color: rgb(20, 20, 20);
 }
 
@@ -434,7 +436,7 @@
 .biography_title h1 {
     display: flex;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 40px;
     color: white;
@@ -449,7 +451,7 @@
 
 .biography_parag p {
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
 }
 
@@ -457,7 +459,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
     margin: 10px 10px;
     border-radius: 10px;
 }
@@ -475,25 +477,25 @@
 
 .detail {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .details_label {
     display: grid;
     color: white;
     place-items: center;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 0px;
 }
 
 #email {
     color: white;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 #location {
     color: white;
-    font-size: 17px;
+    font-size: 12px;
 }
 
 [class*="glass"] {
