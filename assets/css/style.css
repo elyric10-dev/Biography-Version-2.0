@@ -9,6 +9,13 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+body,
+html {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     position: relative;
     display: flex;
@@ -23,7 +30,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    max-width: 100%;
     min-width: 320px;
     height: 300px;
 }
@@ -283,7 +290,6 @@
     transform: translateY(-75px);
     transition: 0.5s;
     animation: main_up 0.5s linear forwards;
-    overflow: hidden;
 }
 
 .main_master_container.active {
@@ -299,7 +305,6 @@
     place-items: center;
     flex: 0.3;
     background-color: rgb(20, 20, 20);
-    overflow: hidden;
 }
 
 .left-glass-container {
@@ -544,10 +549,7 @@
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 180vh;
-    }
-    .left_container_master {
-        flex: .4;
+        height: 220vh;
     }
     .titles .title1.active,
     .titles .title2.active {
@@ -650,7 +652,10 @@
 
 @media only screen and (min-width: 991px) {
     .container {
+        position: relative;
         height: 150vh;
+        max-width: 1820px;
+        max-height: 1480px;
     }
     [class*="glass"] {
         width: 95%;
@@ -659,6 +664,9 @@
     }
     .fullname h1 {
         font-size: 55px;
+    }
+    .logo_container {
+        margin-left: 5%;
     }
     .logo {
         width: 120px;
